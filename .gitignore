@@ -1,0 +1,9 @@
+*~
+\#*#
+.#*
+
+*.pyc
+*.pyo
+
+# do not commit solutions :)
+*/code.py
