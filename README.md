@@ -1,6 +1,8 @@
 Unit tests for Udacity CS373 homeworks
 ======================================
 
+* [https://github.com/DirtYiCE/cs373-tests](https://github.com/DirtYiCE/cs373-tests)
+
 Requirements
 ------------
 
@@ -11,66 +13,66 @@ Requirements
 Quick usage
 -----------
 
-1. Clone the repo (if you haven't done already):
+1.  Clone the repo (if you haven't done already):
 
-       $ git clone git://github.com/DirtYiCE/cs373-tests.git
-       $ cd cs373-tests
+        $ git clone git://github.com/DirtYiCE/cs373-tests.git
+        $ cd cs373-tests
 
-2. Make sure you have set `$EDITOR` to your favourite text editor, then issue:
+2.  Make sure you have set `$EDITOR` to your favourite text editor, then issue:
 
-       $ ./test.py <homework_number> edit
+        $ ./test.py <homework_number> edit
 
-   Where `<homework_number>` is in format like `1.4` for the 4<sup>th</sup>
-   question in the first homework. You can also just open
-   `<homework_number>/code.py` with your editor if you do not like to use the
-   command like (altough you may need to create the file first).
+    Where `<homework_number>` is in format like `1.4` for the 4<sup>th</sup>
+    question in the first homework. You can also just open
+    `<homework_number>/code.py` with your editor if you do not like to use the
+    command like (altough you may need to create the file first).
 
-   It will be an empty file, do not worry. It will set the given variables to
-   the given values before executing your code. You actually only have to write
-   the part after the "do not modify anything before" lines, and you also don't
-   have to print it (just place in the correct variable).
+    It will be an empty file, do not worry. It will set the given variables to
+    the given values before executing your code. You actually only have to write
+    the part after the "do not modify anything before" lines, and you also don't
+    have to print it (just place in the correct variable).
 
-   For example, given a task to add two numbers together, you would get
-   something like this to edit:
+    For example, given a task to add two numbers together, you would get
+    something like this to edit:
 
-       a = 4.0
-       b = 5.0
+        a = 4.0
+        b = 5.0
 
-       # ENTER CODE BELOW
+        # ENTER CODE BELOW
 
-       c = 0.0
+        c = 0.0
 
 
 
-       # You must print it with the following code:
+        # You must print it with the following code:
 
-       print(c)
+        print(c)
 
-   Then, when you run `./test.py <num> edit`, you only have to enter
+    Then, when you run `./test.py <num> edit`, you only have to enter
 
-       c = a + b
+        c = a + b
 
-   And it will work like you just inserted it after `c = 0.0`.
+    And it will work like you just inserted it after `c = 0.0`.
 
-3. When you think you should test your code, with the examples given in the
-   homework assigment, run:
+3.  When you think you should test your code, with the examples given in the
+    homework assigment, run:
 
        $ ./test.py <homework_number>
 
-   If all test passes, you will see an `OK` at the end of output. Otherwise it
-   will tell you which tests failed, the expected and your output.
+    If all test passes, you will see an `OK` at the end of output. Otherwise it
+    will tell you which tests failed, the expected and your output.
 
-4. When you are done, simply paste your code into the correct place in the web
-   interface. Alternatively, you can use
+4.  When you are done, simply paste your code into the correct place in the web
+    interface. Alternatively, you can use
 
-       $ ./test.py <homework_number> format
+        $ ./test.py <homework_number> format
 
-   to print your code (to the stdout) with all the required header and footer
-   stuff. If you use `run` instead of `format`, it will run the code in python,
-   just to check if everything is right.
+    to print your code (to the stdout) with all the required header and footer
+    stuff. If you use `run` instead of `format`, it will run the code in python,
+    just to check if everything is right.
 
-   You will probably want to run the code before saving it (in the browser),
-   just in case Udacity's python handles somehing differently.
+    You will probably want to run the code before saving it (in the browser),
+    just in case Udacity's python handles somehing differently.
 
 Available commands
 ------------------
@@ -81,12 +83,12 @@ General syntax is:
 
 `command` defaults to `test` when not specified. Available commands:
 
-* `edit`:: open your solution (`<homework_number>/code.py`) with `$EDITOR`
-* `zap`:: deletes your solution
-* `test`:: run the tests. Arguments you pass will be handled by
+* `edit`: open your solution (`<homework_number>/code.py`) with `$EDITOR`
+* `zap`: deletes your solution
+* `test`: run the tests. Arguments you pass will be handled by
   [python unittest](http://docs.python.org/library/unittest.html#command-line-options).
-* `format`:: place headers and footers around your solution, then print to stdout.
-* `run`:: executes the output of `format`
+* `format`: place headers and footers around your solution, then print to stdout.
+* `run`: executes the output of `format`
 
 License
 -------
