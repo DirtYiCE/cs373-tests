@@ -34,7 +34,12 @@ if action == 'edit':
     import shlex, subprocess
 
     if not os.path.isfile('%s/code.py' % hw):
-        open('%s/code.py' % hw, 'a').close()
+        f = open('%s/code.py' % hw, 'w')
+        if os.path.isfile('%s/base_code.py' % hw):
+            f2 = open('%s/base_code.py' % hw, 'r')
+            f.write(f2.read())
+            f2.close()
+        f.close()
 
     cmd = shlex.split(os.environ['EDITOR'])
     cmd.append('%s/code.py' % hw)
