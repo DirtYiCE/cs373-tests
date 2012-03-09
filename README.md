@@ -23,14 +23,16 @@ Quick usage
         $ ./test.py <homework_number> edit
 
     Where `<homework_number>` is in format like `1.4` for the 4<sup>th</sup>
-    question in the first homework. You can also just open
-    `<homework_number>/code.py` with your editor if you do not like to use the
-    command like (altough you may need to create the file first).
+    question in the first homework. You can also copy
+    `<homework_number>/base_code.py` to `<homework_number>/code.py` (if exists,
+    otherwise just create a new file), then open it with your editor.
 
-    It will be an empty file, do not worry. It will set the given variables to
+    It may be an empty file, do not worry. It will set the given variables to
     the given values before executing your code. You actually only have to write
     the part after the "do not modify anything before" lines, and you also don't
-    have to print it (just place in the correct variable).
+    have to print it (just place in the correct variable). If you're not sure,
+    open `<homework_number>/template.py` and search for `# !code!`. Your code
+    will be executed like you placed your code there.
 
     For example, given a task to add two numbers together, you would get
     something like this to edit:
@@ -93,9 +95,10 @@ General syntax is:
 License
 -------
 
-`*/template.py` files are from Udacity. Other files were written by me, and
-you're free to do whatever you want do with them. They are available under the
-terms of [WTFPL](http://sam.zoy.org/wtfpl/), if you like that better.
+`*/template.py` files are from Udacity. `*/testcase.py` also tend to contain
+some Udacity code. Other files were written by me, and you're free to do
+whatever you want do with them. They are available under the terms of
+[WTFPL](http://sam.zoy.org/wtfpl/), if you like that better.
 
 This program is free software. It comes without any warranty, to the extent
 permitted by applicable law.
