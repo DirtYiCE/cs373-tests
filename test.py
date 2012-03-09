@@ -28,7 +28,11 @@ def format():
     s2 = f.read()
     f.close()
 
-    return s.replace('# !code!', s2)
+    import re
+    def repl(m):
+        return m.group(1) + ('\n' + m.group(1)).join(s2.split('\n'))
+
+    return re.sub('(.*)# !code!', repl, s, re.MULTILINE)
 
 if action == 'edit':
     import shlex, subprocess
