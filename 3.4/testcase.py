@@ -50,12 +50,15 @@ class robot:
 
     def move(self, motion):
         x = {
-            'self':    self,
-            'motion':  motion,
+            'self':               self,
+            'motion':             motion,
 
-            'robot':   robot,
-            'random':  random,
-            '_funret': None,
+            'robot':              robot,
+            'random':             random,
+            'landmarks':          landmarks,
+            'world_size':         world_size,
+            'max_steering_angle': max_steering_angle,
+            '_funret':            None,
             }
         for i in dir(math):
             if i not in x:
