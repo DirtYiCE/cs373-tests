@@ -43,9 +43,13 @@ def arrayCmp(case, a, b, epsilon = 1e-12):
         lines.append("'%s' and '%s' does not equal" % (a, b))
         case.fail("\n".join(lines))
 
-def compileFile(file_dir):
+def compileFile(file_dir, funwrap = False):
     fn = os.path.join(os.path.dirname(file_dir), 'code.py')
     f = open(fn, 'r')
-    c = compile(f.read(), fn, 'exec')
+    s = f.read()
+    if funwrap:
+        s = 'def _funwrap():\n  ' + '\n  '.join(s.split('\n'))+'\n_funret = _funwrap()'
+
+    c = compile(s, fn, 'exec')
     f.close()
     return c
